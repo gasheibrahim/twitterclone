@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<% @twitters.each do |twitter| %>
+<center>
+<div class="card" style="width: 500px;">
+  <div class="card-header">
+    Twitters
+  </div>
+  <div class="card-body">
+    <p class="card-text"><%= twitter.content %></p>
+    <%= link_to 'Show', twitter, class:"btn btn-success" %>
+    <%= link_to 'Edit', edit_twitter_path(twitter), class:"btn btn-primary" %>
+    <%= link_to 'Destroy', twitter, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %>
+  </div>
+</div>
+<br>
+<% end %>
+<%= link_to 'New Twitter', new_twitter_path, class:"btn btn-warning" %>
+</center>
+

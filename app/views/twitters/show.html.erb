@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+<center>
+<p>
+  <strong>Content:</strong><br>
+  <%= @twitter.content %>
+</p>
+<%= link_to 'Comfirm', twitters_path, data: { confirm: 'Are you sure do you want to create a post' }, class:"btn btn-warning" %>
+<%= link_to 'Back', edit_twitter_path(@twitter), class:"btn" %>
+</center>
